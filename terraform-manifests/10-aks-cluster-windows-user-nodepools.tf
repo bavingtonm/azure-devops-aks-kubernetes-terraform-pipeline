@@ -1,6 +1,6 @@
 # Create Windows Azure AKS Node Pool
 
-resource "azurerm_kubernetes_cluster_node_pool" "win102" {
+resource "azurerm_kubernetes_cluster_node_pool" "win101" {
   #availability_zones    = [1, 2, 3]
   # Added June 2023
   zones = [ 1, 2, 3 ]
@@ -10,7 +10,7 @@ resource "azurerm_kubernetes_cluster_node_pool" "win102" {
   max_count             = 3
   min_count             = 1
   mode                  = "User"
-  name                  = "win102"
+  name                  = "win101"
   orchestrator_version  = data.azurerm_kubernetes_service_versions.current.latest_version
   os_disk_size_gb       = 35
   os_type               = "Windows" # Default is Linux, we can change to Windows
