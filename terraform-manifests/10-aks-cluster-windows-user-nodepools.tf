@@ -7,7 +7,7 @@ resource "azurerm_kubernetes_cluster_node_pool" "win101" {
   #enable_auto_scaling  = true # COMMENTED OCT2024
   auto_scaling_enabled = true  # ADDED OCT2024
   kubernetes_cluster_id = azurerm_kubernetes_cluster.aks_cluster.id
-  max_count             = 3
+  max_count             = 1
   min_count             = 1
   mode                  = "User"
   name                  = "win101"
